@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        // 1.Literals examples
+        var integer = 43;
+        var float = 3.14;
+        var bool = true;
+        var string = "Hello world!";
+        var obj = {
+            firstName: 'Vanio',
+            lastName: 'Petrov',
+            age: 25
+        };
+        var arr = [3, 5, 8];
+        var func = function () { jsConsole.writeLine('Function says hi!') };
+
+
+        // 2.Quoted text literal
+        var quotedText = "'How you doin' ?', Joey said.";
+
+        // 3.Typeof examples
+
+        jsConsole.writeLine('Type of ' + integer + ' is: ' + typeof integer);
+        jsConsole.writeLine('Type of ' + float + ' is: ' + typeof float);
+        jsConsole.writeLine('Type of ' + bool + ' is: ' + typeof bool);
+        jsConsole.writeLine('Type of ' + string + ' is: ' + typeof string);
+        jsConsole.writeLine('Type of ' + obj + ' is: ' + typeof obj);
+        jsConsole.writeLine('Type of ' + arr + ' is: ' + typeof arr);
+        jsConsole.writeLine('Type of ' + func + ' is: ' + typeof func);
+        jsConsole.writeLine('Type of ' + quotedText + ' is: ' + typeof quotedText);
+
+
+        jsConsole.writeLine();
+        // 4.Default values
+
+        var undefinedValue = undefined;
+        var nullValue = null;
+
+        jsConsole.writeLine('Type of ' + undefinedValue + ' is: ' + typeof undefinedValue);
+        jsConsole.writeLine('Type of ' + nullValue + ' is: ' + typeof nullValue);
+    </script>
+
+</body>
+</html>

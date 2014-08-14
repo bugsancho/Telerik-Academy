@@ -1,0 +1,71 @@
+﻿div, img, ul, li, a, span {
+    margin: 0;
+    padding: 0;
+}
+
+    div#wrapper {
+        width: 960px;
+        font-size: 16px;
+        font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+
+        div {
+            width: 693px;
+            background: rgb(204,204,204);
+            border-radius: 5px;
+            margin-left: 7px;
+            margin-top: 15px;
+
+            div.holder {
+
+
+                img {
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    margin-left: 3px;
+                    float: left;
+                    height: 414px;
+                }
+            }
+
+            div.playlist {
+
+                ul {
+                    list-style-type: none;
+
+                    li {
+                        margin: 5px 10px 0 562px;
+
+                        &:first-child{
+
+                            padding-top:16px;
+                        }
+
+                        &:last-child{
+
+                            padding-bottom:30px;
+                        }
+                        a {
+                            text-decoration: none;
+                            color: black;
+
+
+                            img {
+                                display:inline-block;
+                                padding-left:18px;
+                                border-radius:10px;
+                            }
+
+                            span {
+                                display: block;
+                                font-weight:bold;
+                                text-align:center;
+                                border-bottom:1px solid black;
+
+                                padding-bottom:2px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

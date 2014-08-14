@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h2>Click to print the first 20 array indexes multiplied by 5</h2>
+    <div id="js-console">
+        <button onclick="PrintNumbers()" >Print Numbers</button>
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        function PrintNumbers() {
+
+            var numbers = new Array(20);
+            jsConsole.write('The first 20 numbers are: ');
+            for (var i = 0; i < numbers.length; i++) {
+                numbers[i] = i * 5;
+                jsConsole.write(numbers[i] + ' ');
+            }
+            jsConsole.writeLine();
+
+        }
+    </script>
+</body>
+</html>

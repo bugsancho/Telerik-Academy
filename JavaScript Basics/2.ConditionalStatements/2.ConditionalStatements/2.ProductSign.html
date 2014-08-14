@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Product sign</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+
+        <label for="first-number">Enter first number:</label>
+        <input id="first-number" type="number" />
+        <br />
+        <label for="second-number">Enter second number:</label>
+        <input id="second-number" type="number" />
+        <br />
+        <label for="third-number">Enter third number:</label>
+        <input id="third-number" type="number" />
+        <input type="button" value="Evaluate" onclick="EvaluateProductSign()" />
+
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        function EvaluateProductSign() {
+            var firstNumber = jsConsole.readFloat('#first-number'),
+                secondNumber = jsConsole.readFloat('#second-number'),
+                thirdNumber = jsConsole.readFloat('#third-number');
+
+            var productSign = 0;
+            if (!firstNumber || !secondNumber || !thirdNumber) {
+                jsConsole.writeLine('The product is 0 or invalid!');
+                return;
+            }
+            else if (firstNumber > 0) {
+                if (secondNumber > 0) {
+
+                    if (thirdNumber > 0) {
+                        productSign = 'positive';
+                    }
+                    else {
+                        productSign = 'negative';
+                    }
+                }
+                else {
+                    if (thirdNumber > 0) {
+                        productSign = 'negative';
+                    }
+                    else {
+                        productSign = 'positive';
+                    }
+                }
+            }
+            else {
+                if (secondNumber > 0) {
+
+                    if (thirdNumber > 0) {
+                        productSign = 'negative';
+                    }
+                    else {
+                        productSign = 'positive';
+                    }
+                }
+                else {
+                    if (thirdNumber > 0) {
+                        productSign = 'positive';
+                    }
+                    else {
+                        productSign = 'negative';
+                    }
+                }
+
+            }
+
+            jsConsole.writeLine('The product of the multiplication is ' + productSign);
+        }
+    </script>
+</body>
+
+</html>

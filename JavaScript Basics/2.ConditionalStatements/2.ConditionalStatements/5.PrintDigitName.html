@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Digit name</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="js-console">
+        <label for="input-number">Enter a number: </label>
+        <input id="input-number" type="number" onchange="PrintDigitName()" />
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        function PrintDigitName() {
+            var number = jsConsole.readInteger('#input-number');
+            if (!number || number < 0 || number > 9) {
+                jsConsole.writeLine('Invalid input! Enter a single digit!');
+                return;
+            }
+            var digitName;
+            switch (number) {
+                case 0: digitName = 'zero'; break;
+                case 1: digitName = 'one'; break;
+                case 2: digitName = 'two'; break;
+                case 3: digitName = 'three'; break;
+                case 4: digitName = 'four'; break;
+                case 5: digitName = 'five'; break;
+                case 6: digitName = 'six'; break;
+                case 7: digitName = 'seven'; break;
+                case 8: digitName = 'eight'; break;
+                case 9: digitName = 'nine'; break;
+            }
+
+            jsConsole.writeLine('The English word for the digit ' + number + ' is: ' + digitName);
+        }
+    </script>
+</body>
+</html>

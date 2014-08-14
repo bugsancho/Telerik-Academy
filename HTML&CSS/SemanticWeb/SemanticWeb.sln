@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scores", "Scores\Scores.csproj", "{F32B8FE7-369F-4E3E-B9A0-F2678DDB6780}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedIn", "LinkedIn\LinkedIn.csproj", "{7BEF13BC-2F21-42BE-B078-4DAB9085053B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refactoring", "Refactoring\Refactoring.csproj", "{522D877E-8ED3-4135-8A44-7D5A9C065F1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F32B8FE7-369F-4E3E-B9A0-F2678DDB6780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F32B8FE7-369F-4E3E-B9A0-F2678DDB6780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F32B8FE7-369F-4E3E-B9A0-F2678DDB6780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F32B8FE7-369F-4E3E-B9A0-F2678DDB6780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BEF13BC-2F21-42BE-B078-4DAB9085053B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BEF13BC-2F21-42BE-B078-4DAB9085053B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BEF13BC-2F21-42BE-B078-4DAB9085053B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BEF13BC-2F21-42BE-B078-4DAB9085053B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{522D877E-8ED3-4135-8A44-7D5A9C065F1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{522D877E-8ED3-4135-8A44-7D5A9C065F1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{522D877E-8ED3-4135-8A44-7D5A9C065F1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{522D877E-8ED3-4135-8A44-7D5A9C065F1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="styles/style.css" type="text/css"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <li>
+                    <a href="#/">Home</a>
+                </li>
+                <li>
+                    <a href="#/login">Login</a>
+                </li>
+                <li>
+                    <a href="#/posts">Posts</a>
+                </li>
+                <li>
+                    <a href="#/logout">Logout</a>
+                </li>
+                <li>
+                    <a href="#/register">Register</a>
+                </li>
+                <li>
+                    <a href="#/create">Create Post</a>
+                </li>
+                <li>
+                    <a href="#/search">Search Posts</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="sort-options"></div>
+    <div id="main-content"></div>
+    <script id="messages-template" type="x-mustache-template">
+        <div class="well">
+            <div>
+                <strong class="title">Date: </strong>
+                <span class="date">{{{postDate}}}</span>
+                <br />
+                <strong class="title">Title: {{{title}}}:</strong>
+                <br />
+                <strong class="author">Author: {{user.username}}</strong>
+                <br />
+                <strong>Message: </strong>
+                <span class="message">{{{body}}}</span>
+            </div>
+        </div>
+    </script>
+    <script src="scripts/libs/require.js" data-main="scripts/app"></script>
+</body>
+</html>

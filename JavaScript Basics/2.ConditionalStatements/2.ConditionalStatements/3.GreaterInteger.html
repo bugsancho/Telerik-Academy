@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Greatest integer</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+
+        <label for="first-number">Enter first number:</label>
+        <input id="first-number" type="number" />
+        <br />
+        <label for="second-number">Enter second number:</label>
+        <input id="second-number" type="number" />
+        <br />
+        <label for="third-number">Enter third number:</label>
+        <input id="third-number" type="number" />
+        <input type="button" value="Find Greatest" onclick="FindGreatesNumber()" />
+
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        function FindGreatesNumber() {
+            var firstNumber = jsConsole.readFloat('#first-number');
+            var secondNumber = jsConsole.readFloat('#second-number');
+            var thirdNumber = jsConsole.readFloat('#third-number');
+            var greatestNumber;
+
+            if (firstNumber > secondNumber) {
+
+                if (firstNumber > thirdNumber) {
+                    greatestNumber = firstNumber;
+                }
+                else {
+                    greatestNumber = thirdNumber;
+                }
+            }
+            else {
+                if (secondNumber > thirdNumber) {
+                    greatestNumber = secondNumber;
+                }
+                else {
+                    greatestNumber = thirdNumber;
+                }
+            }
+            jsConsole.writeLine('The greatest number is: ' + greatestNumber);
+
+
+        }
+    </script>
+</body>
+</html>

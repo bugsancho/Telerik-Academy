@@ -1,0 +1,119 @@
+﻿body,
+div,
+h1,
+label,
+iput,
+ul,
+li,
+br,
+button,
+span {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 14px;
+  font-family: Corbel;
+}
+body #root {
+  width: 350px;
+  margin-left: 5px;
+  margin-top: 3px;
+  border-top: 3px solid #000000;
+  border-left: 3px solid #000000;
+  border-top-left-radius: 15px;
+}
+body #root h1 {
+  margin-top: 18px;
+  margin-left: 70px;
+  font-size: 27px;
+}
+body #root div.widget {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-left: 25px;
+  margin-top: 18px;
+  padding: 15px;
+  width: 260px;
+  background: -webkit-linear-gradient(top, #cbf7be 0%, #cbf7be 14%, #e5d96e 59%, #e5d96e 100%);
+  text-align: right;
+  position: relative;
+}
+body #root div.widget > div label {
+  font-weight: bold;
+}
+body #root div.widget > div input {
+  background: rgba(255, 255, 255, 0);
+  border-radius: 5px;
+  border-top: 3px solid #86a37d;
+  border-left: 3px solid #86a37d;
+  border-right: 3px solid #cbf7be;
+  border-bottom: 3px solid #cbf7be;
+  padding: 5px 10px;
+  margin-left: 5px;
+  width: 140px;
+  color: black;
+  font-style: italic;
+}
+body #root div.widget > div input::-webkit-input-placeholder {
+  color: black;
+}
+body #root div.widget > div > div.dropdown {
+  display: inline-block;
+  width: 165px;
+  text-align: left;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  background-image: url(images/down-arrow.png);
+}
+body #root div.widget > div > div.dropdown:hover {
+  background-image: url(images/left-arrow.png);
+}
+body #root div.widget > div > div.dropdown span.chosen {
+  display: inline-block;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+body #root div.widget > div button {
+  font-size: 1.1em;
+  display: block;
+  width: 260px;
+  height: 35px;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 5px;
+  border-top: 3px solid #86a37d;
+  border-left: 3px solid #86a37d;
+  border-right: 3px solid #cbf7be;
+  border-bottom: 3px solid #cbf7be;
+}
+body #root div.widget > div button:hover {
+  background: -webkit-linear-gradient(top, #cbf7be 0%, #cbf7be 8%, #cdf6ba 12%, #e4d96f 69%, #e5d96e 100%);
+}
+body #root .dropdown ul {
+  display: none;
+  list-style-type: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 160px;
+  background: -webkit-linear-gradient(top, #e5d96e 0%, #e5d96e 14%, #cbf7be 59%, #cbf7be 100%);
+  text-align: center;
+}
+body #root .dropdown ul li {
+  margin: 5px 10px;
+  padding-top: 5px;
+  border-bottom: 1px solid black;
+}
+body #root .dropdown ul li:hover {
+  background: #b6ddaa;
+}
+body #root .dropdown ul li:last-child {
+  border: 0;
+}
+body #root .dropdown ul.expanded {
+  display: block;
+  position: absolute;
+  left: 245px;
+  top: 100px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="js-console">
+        <button onclick="PrintNumbers()">Print Numbers</button>
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        function PrintNumbers() {
+
+            var numbers = [3, 8, -1, 2, 3, 5, 5, 5, 5, 7, 8, 9, -18, -18, -18, 0, -18];
+            var i,
+                longestStreak = 1,
+                longestStreakNumber = numbers[0],
+                currentStreak = 1,
+                currentStreakNumber = numbers[0];
+
+            numbers = numbers.sort();
+
+            for (i = 1; i < numbers.length; i++) {
+
+                if (numbers[i] === numbers[i - 1]) {
+                    currentStreak++;
+                    currentStreakNumber = numbers[i];
+
+                    if (currentStreak > longestStreak) {
+
+                        longestStreak = currentStreak;
+                        longestStreakNumber = currentStreakNumber;
+                    }
+
+                }
+                else {
+                    currentStreak = 1;
+                    currentStreakNumber = numbers[i];
+                }
+
+
+            }
+            jsConsole.writeLine('Longest streak is ' + longestStreak + ' times the number ' + longestStreakNumber);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿body {
+    background-color: #e9e7f3;
+}
+
+h1 {
+    font-weight: normal;
+    margin-left: 30px;
+}
+
+img {
+    float: left;
+    height: 80px;
+    margin: 10px;
+}
+
+article {
+    background-color: white;
+    border: 1px solid black;
+    margin: 30px;
+    width: 50%;
+    height: 100px;
+    padding: 10px;
+}
+
+button {
+    background: url('images/button-1.png');
+    border: 0;
+    color: white;
+    width: 75px;
+    height: 25px;
+    padding: 0;
+}
+
+div {
+    float: right;
+    margin: 0;
+    padding: 0;
+}

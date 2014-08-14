@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="js-console">
+        <button onclick="printNumberOfDivs()">Print Divs Count</button>
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        function printNumberOfDivs() {
+            var divs = document.getElementsByTagName("div");
+            jsConsole.writeLine(divs.length);
+        }
+    </script>
+</body>
+</html>

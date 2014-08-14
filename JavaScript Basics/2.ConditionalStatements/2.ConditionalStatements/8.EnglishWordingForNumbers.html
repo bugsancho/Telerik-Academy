@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>English wording for numbers</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+        <label for="input-number">Enter a number: </label>
+        <input id="input-number" type="number" onchange="PrintNumberName()" />
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function PrintNumberName() {
+            var number = jsConsole.readInteger('#input-number');
+
+            if (number <= 0 || number > 999) {
+                jsConsole.writeLine('Invalid input! Enter a number between 1 and 999');
+                return;
+            }
+
+            var name = '';
+
+            var hundredsDigit = Math.floor(number / 100);
+            var tensDigit = Math.floor(number / 10) % 10;
+            var lastDigit = number % 10;
+
+            if (hundredsDigit !== 0) {
+                name = PrintDigitName((number / 100)) + ' hundred ';
+            }
+
+            switch (tensDigit) {
+                case 0: {
+                    if (name) {
+                        name += 'and ';
+                    }
+                    name += PrintDigitName(lastDigit); break;
+                }
+                case 1:
+                    {
+                        if (name) {
+                            name += 'and ';
+                        }
+
+                        switch (lastDigit) {
+                            case 0: name += 'ten'; break;
+                            case 1: name += 'eleven'; break;
+                            case 2: name += 'twelve'; break;
+                            case 3: name += 'thirteen'; break;
+                            case 4: name += 'fourteen'; break;
+                            case 5: name += 'fifteen'; break;
+                            case 6: name += 'sixteen'; break;
+                            case 7: name += 'seventeen'; break;
+                            case 8: name += 'eighteen'; break;
+                            case 9: name += 'nineteen'; break;
+                        }
+
+                        break;
+                    }
+                case 2: name += 'twenty ' + PrintDigitName(lastDigit); break;
+                case 3: name += 'thirty ' + PrintDigitName(lastDigit); break;
+                case 4: name += 'fourty ' + PrintDigitName(lastDigit); break;
+                case 5: name += 'fifty ' + PrintDigitName(lastDigit); break;
+                case 6: name += 'sixty ' + PrintDigitName(lastDigit); break;
+                case 7: name += 'seventy ' + PrintDigitName(lastDigit); break;
+                case 8: name += 'eighty ' + PrintDigitName(lastDigit); break;
+                case 9: name += 'ninty ' + PrintDigitName(lastDigit); break;
+
+                default:
+
+            }
+
+            jsConsole.writeLine(name);
+        }
+
+
+        function PrintDigitName(number) {
+
+            number = Math.floor(number);
+            var digitName = '';
+            switch (number) {
+                case 0: break;
+                case 1: digitName = 'one'; break;
+                case 2: digitName = 'two'; break;
+                case 3: digitName = 'three'; break;
+                case 4: digitName = 'four'; break;
+                case 5: digitName = 'five'; break;
+                case 6: digitName = 'six'; break;
+                case 7: digitName = 'seven'; break;
+                case 8: digitName = 'eight'; break;
+                case 9: digitName = 'nine'; break;
+            }
+            return digitName;
+        }
+    </script>
+</body>
+</html>

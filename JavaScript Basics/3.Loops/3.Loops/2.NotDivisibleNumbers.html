@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h2>Enter a number to print the numbers from 1 to N, not divisible by 3 and 7 at the same time</h2>
+    <div id="js-console">
+        <label for="input-number">Enter a number: </label>
+        <input id="input-number" type="number" onchange="PrintNumbers()" />
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+            
+        function PrintNumbers() {
+            var number = jsConsole.readInteger('#input-number');
+            if (number < 1) {
+                jsConsole.writeLine('Invalid input! Enter a positive integer!');
+            }
+            jsConsole.write('The numbers from 1 to ' + number + ' that are not divisible by 3 and 7 at the same time are: ');
+            for (var i = 1; i <= number; i++) {
+                                
+                if (i % 21 !== 0) {
+                    
+                    jsConsole.write(i + ' ');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿.fruits-table td {
+    width: 200px;
+}
+
+.fruits-table th {
+    font-style: italic;
+    font-size: 30px;
+}
+
+.right-aligned {
+    text-align: right;
+}
+
+.center-aligned {
+    text-align: center;
+}
+
+body * {
+    margin: 0;
+    padding: 0;
+}
+
+.calculator {
+    border: 1px solid gray;
+    border-spacing: 0;
+    font-size: 2em;
+}
+
+    .calculator tr td {
+        border: 1px solid gray;
+        padding: 0;
+    }
+
+        .calculator tr td input {
+            width: 2em;
+            padding: 0.4em 0.4em 0.4em 0.4em;
+            font-size: 1em;
+            border: none;
+            background: transparent;
+            color: gray;
+        }
+
+    .calculator textarea {
+        width: 100%;
+        font-size: 20px;
+    }
+
+ul {
+    list-style-type: none;
+}
+
+input[type=image] {
+    width: 150px;
+    height: 100px;
+}

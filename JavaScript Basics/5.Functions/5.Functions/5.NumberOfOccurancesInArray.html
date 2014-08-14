@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="js-console">
+        <button onclick="PrintNumbers()">Print Numbers</button>
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        function PrintNumbers() {
+
+            var numbers = [5, 3, 3, 5, 8, 6, 5, 5, 5, 2, 2, 2, 5, 7];
+            var searchedNumber = 5,
+                numberOfOccurances = 0;
+
+            for (var i = 0; i < numbers.length; i++) {
+
+                if (numbers[i] == searchedNumber) {
+                    numberOfOccurances++;
+                }
+            }
+            jsConsole.writeLine("Number of occurances: " + numberOfOccurances);
+        }
+    </script>
+</body>
+</html>

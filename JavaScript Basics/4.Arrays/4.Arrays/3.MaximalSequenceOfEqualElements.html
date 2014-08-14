@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="js-console">
+        <button onclick="PrintNumbers()">Print Numbers</button>
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        function PrintNumbers() {
+
+            var numbers = [5, 3, 3, 5, 8, 6, 5, 5, 5, 2, 2, 2, 5, 7];
+            var longestSequenceLength = 1,
+                currentSequenceLength = 1,
+                longestSequenceNumber = numbers[0];
+            for (var i = 1; i < numbers.length; i++) {
+
+                if (numbers[i] === numbers[i - 1]) {
+
+                    currentSequenceLength++;
+
+                    if (currentSequenceLength > longestSequenceLength) {
+                        longestSequenceLength = currentSequenceLength;
+                        longestSequenceNumber = numbers[i];
+                    }
+                }
+                else {
+                    currentSequenceLength = 1;
+                }
+            }
+
+            jsConsole.writeLine('Longest sequence is ' + longestSequenceLength + ' times the number ' + longestSequenceNumber);
+        }
+    </script>
+</body>
+</html>

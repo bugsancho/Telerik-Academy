@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Slider</title>
+    <script src="libs/jquery-2.1.1.min.js"></script>
+    <script src="scripts/1.slider-scripts.js"></script>
+    <style>
+        body, div, ul, li, img {
+            margin: 0;
+            padding: 0;
+        }
+
+        #slider-content {
+            width: 640px;
+            height: 480px;
+            padding: 10px;
+        }
+
+            #slider-content ul {
+                list-style-type: none;
+            }
+
+            #slider-content li {
+                display: none;
+            }
+
+                #slider-content li.current {
+                    display: block;
+                }
+
+                    #slider-content li.current img {
+                        width: 100%;
+                        height: 100%;
+                    }
+    </style>
+</head>
+<body>
+    <div id="slider-content">
+        <ul>
+            <li><img src="imgs/galaxy-form.jpg" alt="galaxy1" /></li>
+            <li class="current"><img src="imgs/galaxy-merc.jpg" alt="galaxy2" /></li>
+            <li><img src="imgs/galaxy.jpg" alt="galaxy3" /></li>
+            <li><img src="imgs/gaxy.jpg" alt="galaxy4" /></li>
+        </ul>
+    </div>
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+</body>
+</html>

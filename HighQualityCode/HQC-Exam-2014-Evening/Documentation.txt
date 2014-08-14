@@ -1,0 +1,42 @@
+Design pattern: Simple Factory
+	* The factory that creates a manufacturer based on its name
+
+Design pattern: Strategy
+	* The video card in the motherboard serves as a strategy pattern because the motherboard only uses the draw method but does not know how that works. And the behaviour can be changed easily.
+
+Design pattern: Template Method
+	* 
+
+Design pattern: Abstract factory
+	* A manufacturer that can produce different types of computers
+
+Design pattern: Composite
+	* The hard drive array serves as composite for hard drive as it mimics the same behaviour
+
+Design pattern: Mediator
+	* The motherboard serves as a mediator that connects the cpu with the ram and videocard
+
+Found bottlenecks:
+	* In the cpu class instead where the square calculation there was a loop instead of a simple multiplication
+	* In the same class, where the random number generation, instead of using the Random(low, high) there was a loop that generates lots of random numbers until one fits the condition.
+
+Found bugs:
+	* In the HardDriver, in the constructor where the Dictionary<int,string> is initialized, there was a missing square bracket ('>').
+	  There was a missing semi-column in one of the constructors of the same class.
+	* When creating a laptop the program was using a 'LaptopBattery' class that is part of the 'System' namespace and not the defined in the solution class with the same name.
+	* The video card(HardDriver) field was not properly being set in the Cpu class constructor
+
+Single responsibility principle
+	* Every class serves a single purpose as its name suggests. Same goes for methods.
+
+Open/closed principle
+	* The program does not depend on specific classes rather than on interfaces.
+
+Liskov substitution principle
+	* None of the inheritor classes changes the behaviour of the base class. The base class can be substituted with any of its inheritors.
+
+Interface segregation principle
+	* Interfaces are split into the smallest, logically inseparable pieces
+
+Dependency inversion principle
+	* All the dependencies are passed as parameters to the methods that require them or to the constructors of the classes

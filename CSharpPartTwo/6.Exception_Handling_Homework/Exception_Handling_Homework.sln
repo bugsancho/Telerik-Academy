@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.SquareRootCalculation", "1.SquareRootCalculation\1.SquareRootCalculation.csproj", "{83785787-D227-4CB5-9BB4-3C4B8116E06C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.ReadNumberInGivenRange", "2.ReadNumberInGivenRange\2.ReadNumberInGivenRange.csproj", "{3CC773D5-6979-4EEE-8141-14BCFF016B4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.ReadAllTextMethod", "3.ReadAllTextMethod\3.ReadAllTextMethod.csproj", "{0A3D3CA3-8AEC-42E9-A42A-06F47706D1CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.DownloadFileFromInternet", "4.DownloadFileFromInternet\4.DownloadFileFromInternet.csproj", "{C688AB46-F039-40E9-BB9C-A5A9E4A40F94}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83785787-D227-4CB5-9BB4-3C4B8116E06C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83785787-D227-4CB5-9BB4-3C4B8116E06C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83785787-D227-4CB5-9BB4-3C4B8116E06C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83785787-D227-4CB5-9BB4-3C4B8116E06C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CC773D5-6979-4EEE-8141-14BCFF016B4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CC773D5-6979-4EEE-8141-14BCFF016B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CC773D5-6979-4EEE-8141-14BCFF016B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CC773D5-6979-4EEE-8141-14BCFF016B4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A3D3CA3-8AEC-42E9-A42A-06F47706D1CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A3D3CA3-8AEC-42E9-A42A-06F47706D1CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A3D3CA3-8AEC-42E9-A42A-06F47706D1CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A3D3CA3-8AEC-42E9-A42A-06F47706D1CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C688AB46-F039-40E9-BB9C-A5A9E4A40F94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C688AB46-F039-40E9-BB9C-A5A9E4A40F94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C688AB46-F039-40E9-BB9C-A5A9E4A40F94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C688AB46-F039-40E9-BB9C-A5A9E4A40F94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

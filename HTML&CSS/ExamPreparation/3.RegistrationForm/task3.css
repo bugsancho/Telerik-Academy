@@ -1,0 +1,85 @@
+﻿div,
+form,
+fieldset,
+legend,
+label,
+input,
+button {
+  margin: 0;
+  padding: 0;
+}
+div#wrapper {
+  width: 960px;
+  font-size: 18px;
+  font-family: Cambria, 'Palatino Linotype', 'Book Antiqua', 'URW Palladio L', serif;
+}
+div#wrapper form {
+  border: 1px solid #444444;
+  margin: 25px;
+  margin-left: 15px;
+  border-radius: 15px;
+  width: 380px;
+  height: 365px;
+  background: -webkit-linear-gradient(top, #e9ff5b 0%, #444444 100%);
+  padding: 15px;
+  color: white;
+  font-size: 0.9em;
+  text-align: right;
+}
+div#wrapper form fieldset {
+  border: 3px solid #555555;
+  border-radius: 5px;
+  padding-right: 15px;
+  text-align: right;
+}
+div#wrapper form fieldset legend {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.1em;
+  padding: 0 15px;
+  margin-bottom: 15px;
+}
+div#wrapper form fieldset label {
+  font-size: 0.9em;
+}
+div#wrapper form fieldset input {
+  background: -webkit-linear-gradient(top, #e9ff5b 0%, #444444 100%);
+  border: 2px solid #444444;
+  padding-left: 10px;
+  border-radius: 5px;
+  color: white;
+  line-height: 25px;
+  width: 165px;
+  margin-bottom: 5px;
+}
+div#wrapper form fieldset input[type='number'] {
+  width: 30px;
+}
+div#wrapper form fieldset:last-of-type {
+  margin-bottom: 15px;
+}
+div#wrapper form input[type="radio"] {
+  display: none;
+}
+div#wrapper form input[type="radio"]:checked + label {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+div#wrapper form button,
+div#wrapper form input[type='reset'] {
+  background: -webkit-linear-gradient(top, #e3ff28 0%, #444444 100%);
+  color: #333333;
+  border: 0;
+  border-bottom: 1px solid black;
+  border-radius: 5px;
+  line-height: 30px;
+  width: 130px;
+  margin-top: 15px;
+  font-size: 1.1em;
+  padding: 5px;
+}
+div#wrapper form button:hover,
+div#wrapper form input[type='reset']:hover {
+  background-color: #f0ff89;
+}
+/*# sourceMappingURL=task3.css.map */

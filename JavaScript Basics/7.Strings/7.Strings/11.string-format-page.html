@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+        <button onclick="printSampleResult()">Show sample usage</button>
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script src="scripts/11.string-format-scripts.js"></script>
+    <script>
+        function printSampleResult() {
+
+            jsConsole.writeLine(stringFormat('Name {0}, Age {1}', 'gosho', 16));
+        }
+    </script>
+</body>
+</html>

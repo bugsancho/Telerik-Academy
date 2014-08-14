@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.StudentClass", "1.StudentClass\1.StudentClass.csproj", "{CDC3FC3A-3B77-40C1-8DD6-F0ACDC2970A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.Person", "4.Person\4.Person.csproj", "{CFDDEE8B-212B-4A5B-9386-C85BBA1EAD9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.BitArray", "5.BitArray\5.BitArray.csproj", "{83C62E4C-F2CC-4C4A-B782-F10E900E0F53}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDC3FC3A-3B77-40C1-8DD6-F0ACDC2970A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDC3FC3A-3B77-40C1-8DD6-F0ACDC2970A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDC3FC3A-3B77-40C1-8DD6-F0ACDC2970A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDC3FC3A-3B77-40C1-8DD6-F0ACDC2970A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFDDEE8B-212B-4A5B-9386-C85BBA1EAD9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFDDEE8B-212B-4A5B-9386-C85BBA1EAD9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFDDEE8B-212B-4A5B-9386-C85BBA1EAD9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFDDEE8B-212B-4A5B-9386-C85BBA1EAD9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83C62E4C-F2CC-4C4A-B782-F10E900E0F53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83C62E4C-F2CC-4C4A-B782-F10E900E0F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83C62E4C-F2CC-4C4A-B782-F10E900E0F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83C62E4C-F2CC-4C4A-B782-F10E900E0F53}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

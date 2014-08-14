@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sort numbers</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+
+        <label for="first-number">Enter first number:</label>
+        <input id="first-number" type="number" />
+        <br />
+        <label for="second-number">Enter second number:</label>
+        <input id="second-number" type="number" />
+        <br />
+        <label for="third-number">Enter third number:</label>
+        <input id="third-number" type="number" />
+        <input type="button" value="Order" onclick="OrderNumbers()" />
+
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        function OrderNumbers() {
+            var firstNumber = jsConsole.readFloat('#first-number')
+                secondNumber = jsConsole.readFloat('#second-number')
+                thirdNumber = jsConsole.readFloat('#third-number');
+         
+            var greaterNumber,
+                lesserNumber,
+                middleNumber;
+
+            if (firstNumber >= secondNumber) {
+                if (secondNumber >= thirdNumber) {
+                    greaterNumber = firstNumber;
+                    middleNumber = secondNumber;
+                    lesserNumber = thirdNumber;
+                }
+                else if(firstNumber >= thirdNumber){
+                    greaterNumber = firstNumber;
+                    middleNumber = thirdNumber;
+                    lesserNumber = secondNumber;
+                }
+                else {
+                    greaterNumber = thirdNumber;
+                    middleNumber = firstNumber;
+                    lesserNumber = secondNumber;
+                }
+            }
+            else {
+                if (firstNumber >= thirdNumber) {
+                    greaterNumber = secondNumber;
+                    middleNumber = firstNumber;
+                    lesserNumber = thirdNumber;
+                }
+                else if (secondNumber >= thirdNumber) {
+                    greaterNumber = secondNumber;
+                    middleNumber = thirdNumber;
+                    lesserNumber = firstNumber;
+                }
+                else {
+                    greaterNumber = thirdNumber;
+                    middleNumber = secondNumber;
+                    lesserNumber = firstNumber;
+                }
+               
+            }
+            jsConsole.writeLine('Numbers in descending order: ' + greaterNumber + ' ' + middleNumber + ' ' + lesserNumber);
+        }
+    </script>
+
+</body>
+</html>

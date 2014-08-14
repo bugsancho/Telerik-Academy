@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Prime number check</title>
+
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+        <label for="input-number">Enter a number: </label>
+        <input id="input-number" type="number" onchange="CheckNumber()" />
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        function CheckNumber() {
+            var number = jsConsole.readInteger('#input-number');
+
+            if (number > 100 || number <= 0) {
+                jsConsole.writeLine('Invalid input! Enter a number between 0 and 100');
+                return;
+            }
+
+            // A number is prime if it cannot be divided without reminder by the prime numbers in the range [0, sqrt(n)]
+            var primeNumbers = [2, 3, 5, 7];
+
+            for (var i = 0; i < primeNumbers.length; i++) {
+
+                if ((number % primeNumbers[i] === 0) && (number !== primeNumbers[i])) {
+                    jsConsole.writeLine('The number ' + number +' is not prime!');
+                    return;
+                }
+            }
+
+            jsConsole.writeLine('The number ' + number + ' is prime!');
+        }
+    </script>
+</body>
+</html>

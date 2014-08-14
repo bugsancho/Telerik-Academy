@@ -1,0 +1,91 @@
+﻿body,
+div,
+hgroup,
+h1,
+h2,
+h3,
+p,
+a,
+span {
+  margin: 0;
+  padding: 0;
+}
+div#wrapper {
+  width: 960px;
+  font-size: 16px;
+  font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+  padding: 20px;
+}
+div#wrapper a {
+  text-decoration: none;
+  color: #c72d2f;
+}
+div#wrapper > div {
+  float: left;
+  width: 140px;
+  height: 260px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-bottom: 2px solid #d3d7da;
+  border-top: 2px solid #d3d7da;
+  padding: 0 4px;
+}
+div#wrapper > div hgroup {
+  padding-left: 40px;
+  height: 50px;
+  display: table-cell;
+  vertical-align: bottom;
+  background-position: 0px bottom;
+  background-repeat: no-repeat;
+}
+div#wrapper > div hgroup h2,
+div#wrapper > div hgroup h3 {
+  font-weight: bold;
+  font-size: 1em;
+}
+div#wrapper > div p {
+  margin-top: 16px;
+}
+div#wrapper > div > div {
+  margin-top: 5px;
+}
+div#wrapper > div > div a {
+  display: block;
+}
+div#wrapper > div > div span {
+  text-transform: uppercase;
+}
+div#wrapper > div div.yellowBox {
+  background: #ffffdd;
+  border: 1px solid #ff0;
+}
+div#wrapper > div div.yellowBox a {
+  display: inline;
+}
+div#wrapper > div:nth-of-type(1) hgroup {
+  background-image: url(imgs/install.png);
+}
+div#wrapper > div:nth-of-type(2) hgroup {
+  background-image: url(imgs/tuneUp.png);
+}
+div#wrapper > div:nth-of-type(3) hgroup {
+  background-image: url(imgs/manage.png);
+}
+div#wrapper > div:nth-of-type(4) hgroup {
+  background-image: url(imgs/openSource.png);
+}
+div#wrapper > div:nth-of-type(5) hgroup {
+  background-image: url(imgs/twitter.png);
+}
+div#wrapper > div:nth-of-type(6) hgroup {
+  background-image: url(imgs/about.png);
+}
+div#wrapper > div:nth-of-type(2n) {
+  height: 280px;
+  border: 2px solid #d3d7da;
+  background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 22%, #f1f2f3 100%);
+}
+div#wrapper > div:first-child {
+  border-left: 2px solid #d3d7da;
+}
+/*# sourceMappingURL=task3.css.map */

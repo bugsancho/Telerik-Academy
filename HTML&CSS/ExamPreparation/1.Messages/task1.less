@@ -1,0 +1,105 @@
+﻿div, ul, li, span, a {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'DejaVu Sans Condensed', sans-serif;
+
+    div#wrapper {
+        width: 960px;
+        color: rgb(0,148,255);
+
+        ul {
+            list-style-type: none;
+        }
+
+        .msg-bar {
+            width: 465px;
+            margin-top: 205px;
+            margin-left: 42px;
+            position: relative;
+
+
+            & > li {
+                display: inline-block;
+
+                a.msg-bar-btn {
+                    text-decoration: none;
+                    border: 1px solid black;
+                    background: -webkit-linear-gradient(top, #aaffef 0%,#13ffd2 100%);
+                    padding: 5px 15px;
+                    display: inline-block;
+
+                    &:hover {
+                        border-top: 0;
+                        background: rgb(0,221,179);
+
+                        & + .msg-bar-content {
+                            display: block;
+                        }
+                    }
+
+                    &:visited {
+                        color: rgb(0,148,255);
+                    }
+                }
+
+
+                .msg-bar-content {
+                    display: none;
+                    background-color: rgb(170,255,239);
+                    position: absolute;
+                    bottom: 35px;
+                    left: 0;
+                    right: 0;
+                    border: 1px solid black;
+                    border-radius: 15px;
+                    border-bottom: 0;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+
+                    ul {
+                        list-style-type: none;
+
+                        li {
+                            display: block;
+                            margin-top: 5px;
+
+                            span {
+                                display: block;
+                                text-align: right;
+                                border-bottom: 1px solid black;
+                                margin-left: 100px;
+                                padding: 5px 15px;
+
+                                &.user {
+                                    border: 1px solid black;
+                                    border-radius: 100px;
+                                    float: left;
+                                    padding-left: 25px;
+                                    margin: 0;
+                                    background-position-x:5px;
+                                    background-position-y:7px;
+
+
+                                }
+
+
+                            }
+
+                            &.me-item .user{
+                                background-image:url(imgs/me.png);
+                                background-repeat:no-repeat;
+
+                            }
+
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

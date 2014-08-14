@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+
+        <label for="searched-index">Enter an index: </label>
+        <input id="searched-index" type="number" onchange="testFunc()" />
+
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        function testFunc() {
+            var numbers = [5, 3, 3, 5, 8, 6, 5, 5, 5, 2, 2, 2, 5, 7];
+            var searchedIndex = jsConsole.readInteger("#searched-index");
+            var isLeftElementLesser = false,
+                isRightElementLesser = false;
+
+            if (searchedIndex > numbers.length || searchedIndex < 0) {
+                jsConsole.writeLine("Invalid input!");
+            }
+            else {
+                    if (searchedIndex === 0 || numbers[searchedIndex - 1] < numbers[searchedIndex]) {
+                        isLeftElementLesser = true;
+                }
+
+                    if (searchedIndex === numbers.length - 1 || numbers[searchedIndex + 1] < numbers[searchedIndex]) {
+                        isRightElementLesser = true;
+                }
+            }
+            if (isLeftElementLesser && isRightElementLesser) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Greates number</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+
+        <label for="first-number">Enter first number:</label>
+        <input id="first-number" type="number" />
+        <br />
+        <label for="second-number">Enter second number:</label>
+        <input id="second-number" type="number" />
+        <br />
+        <label for="third-number">Enter third number:</label>
+        <input id="third-number" type="number" />
+        <br />
+        <label for="fourth-number">Enter fourth number:</label>
+        <input id="fourth-number" type="number" />
+        <br />
+        <label for="fifth-number">Enter fifth number:</label>
+        <input id="fifth-number" type="number" />
+        <input type="button" value="Find Greatest" onclick="FindGreatesNumber()" />
+
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        function FindGreatesNumber() {
+            var firstNumber = jsConsole.readFloat('#first-number'),
+                secondNumber = jsConsole.readFloat('#second-number'),
+                thirdNumber = jsConsole.readFloat('#third-number'),
+                fourthNumber = jsConsole.readFloat('#fourth-number'),
+                fifthNumber = jsConsole.readFloat('#fifth-number');
+
+            var greatestNumber;
+
+
+            if (firstNumber >= secondNumber && firstNumber >= thirdNumber && firstNumber >= fourthNumber && firstNumber >= fifthNumber) {
+                greatestNumber = firstNumber;
+            }
+            else if (secondNumber >= firstNumber && secondNumber >= thirdNumber && secondNumber >= fourthNumber && secondNumber >= fifthNumber) {
+                greatestNumber = secondNumber;
+            }
+            else if (thirdNumber >= firstNumber && thirdNumber >= secondNumber && thirdNumber >= fourthNumber && thirdNumber >= fifthNumber) {
+                greatestNumber = thirdNumber;
+            }
+            else if (fourthNumber >= firstNumber && fourthNumber >= thirdNumber && fourthNumber >= thirdNumber && fourthNumber >= fifthNumber) {
+                greatestNumber = fourthNumber;
+            }
+            else {
+                greatestNumber = fifthNumber;
+            }
+
+
+
+            jsConsole.writeLine('The greatest number is: ' + greatestNumber);
+
+
+        }
+    </script>
+
+</body>
+</html>

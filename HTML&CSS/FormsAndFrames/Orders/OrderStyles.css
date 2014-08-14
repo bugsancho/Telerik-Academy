@@ -1,0 +1,22 @@
+﻿thead, tfoot {
+    background-color: aqua;
+}
+
+table {
+    border-spacing: 0;
+}
+
+tfoot td {
+    border: none;
+}
+
+input[type=text]{
+    width:60%;
+    
+}
+th{
+    text-align:left;
+}
+.right-aligned{
+    text-align:right;
+}

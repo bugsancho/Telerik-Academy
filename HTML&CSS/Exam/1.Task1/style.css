@@ -1,0 +1,91 @@
+﻿body,
+div,
+header,
+h1,
+h2,
+nav,
+ul,
+li,
+article,
+aside,
+hr,
+form,
+input {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+.clear {
+  clear: both;
+}
+#wrapper {
+  width: 960px;
+  margin: 0 0;
+  padding-left: 4px;
+}
+#wrapper header {
+  background-image: url(images/header-bg.png);
+  position: relative;
+}
+#wrapper header div#title {
+  float: left;
+  margin: 20px;
+}
+#wrapper header div#title h1 {
+  font-size: 34px;
+  color: #eeffee;
+}
+#wrapper header div#title h2 {
+  color: #c0c0c0;
+  font-weight: normal;
+  font-size: 1em;
+}
+#wrapper header nav#nav ul {
+  list-style-type: none;
+  position: absolute;
+  right: 28px;
+  top: 44px;
+}
+#wrapper header nav#nav ul li {
+  float: left;
+  color: #cc6600;
+  font-weight: bold;
+  font-size: 18px;
+}
+#wrapper header nav#nav ul li:last-of-type {
+  margin-left: 20px;
+}
+#wrapper div#line {
+  height: 5px;
+  background: #39c518;
+}
+#wrapper div#content {
+  float: left;
+}
+#wrapper div#content h1 {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #59770e;
+}
+#wrapper div#content article {
+  width: 760px;
+  color: #555555;
+}
+#wrapper aside#aside {
+  color: #59770e;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+#wrapper aside#aside hr {
+  margin: 7px 0;
+}
+#wrapper aside#aside form input {
+  margin: 2px;
+}
+/*# sourceMappingURL=style.css.map */

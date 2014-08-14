@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="js-console">
+        <button onclick="processInput()">Print Properties</button>
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        function processInput() {
+
+            var smallestProperty = '',
+                largestProperty = '',
+                currentProperty,
+                prop,
+                i,
+                properties = [];
+
+            for (prop in document) {
+                properties.push(prop);
+            }
+            for (prop in navigator) {
+                properties.push(prop);
+            }
+            for (prop in window) {
+                properties.push(prop);
+            }
+
+            for (i = 0; i < properties.length; i += 1) {
+                currentProperty = properties[i]
+
+                if (!smallestProperty && !largestProperty) {
+                    smallestProperty = currentProperty;
+                    largestProperty = currentProperty;
+                    continue;
+                }
+
+                if (compareLexicographically(currentProperty, smallestProperty) < 0) {
+                    smallestProperty = currentProperty;
+                }
+                if (compareLexicographically(currentProperty, largestProperty) > 0) {
+                    largestProperty = currentProperty;
+                }
+            }
+            jsConsole.writeLine('Largest property: ' + largestProperty);
+            jsConsole.writeLine('Smallest property: ' + smallestProperty);
+        }
+
+        // returns '-1' if the first string comes first, '1' in the opposite case and '0' if they are equal
+        function compareLexicographically(firstString, secondString) {
+
+            var shorterSequence = firstString.length <= secondString.length ? firstString.length : secondString.length;
+
+            firstString = firstString.toLowerCase();
+            secondString = secondString.toLowerCase();
+
+
+            for (var i = 0; i < shorterSequence; i++) {
+
+                if (firstString[i] !== secondString[i]) {
+
+                    if (firstString[i] < secondString[i]) {
+                        return -1;
+
+                    }
+                    else {
+                        return 1;
+                    }
+                }
+            }
+            if (firstString.length === secondString.length) {
+                return 0;
+            }
+            else if (firstString.length > secondString.length) {
+                return 1;
+            }
+            else {
+                return -1;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+﻿@background-color1: #aabccf;
+@background-color2: #a338f4;
+@background-color3: #8f19ef;
+@background-color4: #9215f2;
+@button-color: #603382;
+@button-background-color: #be64fa;
+@border-color: black;
+@default-border: 1px solid @border-color;
+@hyperlink-color: #aaaaaa;
+@highlighted-text-color: #cccccc;
+@text-color: white;
+
+.clearfix {
+    clear: both;
+}
+
+.reset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.gradient {
+    background: -moz-linear-gradient(top, @background-color1 0%, @background-color2 15%, @background-color3 21%,@background-color4 24%, @background-color4 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@background-color1), color-stop(15%,@background-color2), color-stop(21%,@background-color3), color-stop(24%,@background-color4), color-stop(100%,@background-color4)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,@background-color1 0%,@background-color2 15%,@background-color3 21%,@background-color4 24%,@background-color4 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, @background-color1 0%,@background-color2 15%,@background-color3 21%,@background-color4 24%,@background-color4 100%); /* Opera 11.10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color6',GradientType=0 ); /* IE6-9 */
+}
+
+body {
+    font: 14px normal Arial;
+    color: @text-color;
+    .gradient;
+
+    .clearfix, header div#header-container, header nav, header nav ul, header nav ul li ul.sub-nav-list, section, body aside {
+        zoom: 1;
+    }
+
+        .clearfix:after, header div#header-container:after, header nav:after, header nav ul:after, header nav ul li ul.sub-nav-list:after, ection:after, aside:after, .clearfix:before, header div#header-container:before, header nav:before, header nav ul li ul.sub-nav-list:before, section:before, aside:before {
+            content: "\0020";
+            display: block;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .clearfix:after, header div#header-container:after, header nav:after, header nav ul:after, header nav ul li ul.sub-nav-list:after, section:after, aside:after {
+            .clearfix;
+        }
+
+    header, section, footer, article, h1, h2, h3, h4, h5, h6, input, button, label, p, fieldset, nav, ul, li, a, span, strong, em {
+        .reset;
+    }
+
+    header {
+        padding: 25px 15px 5px 15px;
+
+        div#header-container div#logo-container {
+            float: left;
+            position: relative;
+        }
+
+        div#header-container div#reg-form-container {
+            float: right;
+            position: relative;
+            right: 5%;
+            top: 50%;
+
+            div {
+                text-align: right;
+
+
+                label {
+                    width: 50px;
+                    margin: 5px;
+                }
+
+                input {
+                    width: 130px;
+                    border: @default-border;
+                    border-radius: 10px;
+                    padding: 2px 5px;
+                    margin: 5px;
+                    background-color: @button-background-color;
+                }
+            }
+
+            button {
+                margin-left: auto;
+                margin-right: auto;
+                font-weight: bold;
+                border: 1px solid @button-color;
+                border-style: outset;
+                border-radius: 10px;
+                padding: 5px 8px;
+                background-color: @button-background-color;
+                color: @text-color;
+            }
+
+                button:hover {
+                    background-color: #8949b9;
+                    border-style: inset;
+                }
+        }
+
+        nav {
+            display: inline-block;
+            width: 75%;
+            margin: 20px;
+            padding: 12px;
+            border: 2px solid @border-color;
+            border-radius: 15px;
+
+            ul.nav-list {
+                list-style-type: none;
+            }
+
+            ul li {
+                float: left;
+                margin: 0;
+
+
+                a {
+                    text-decoration: none;
+                    padding: 0 10px 0 10px;
+                    color: @text-color;
+                    font: 1.4em normal Arial;
+                }
+
+                    a.selected {
+                        font-weight: bold;
+                    }
+
+                :hover > a {
+                    text-decoration: underline;
+                    color: #a8a8a8;
+
+                    + ul {
+                        display: block;
+                    }
+                }
+
+                ul.sub-nav-list {
+                    position: absolute;
+                    display: none;
+                    background-color: rgba(179, 94, 243, 0.9);
+                    border-radius: 5px;
+                }
+
+                ul li {
+                    float: none;
+                    margin: 0 15px;
+                    padding: 10px 0;
+                    border-bottom: @default-border;
+
+                    :last-of-type {
+                        border-bottom: none;
+                    }
+
+                    > a {
+                        font-size: 1.2em;
+                        color: @text-color;
+                    }
+                }
+            }
+        }
+    }
+
+    section {
+        width: 75%;
+        float: left;
+        color: @border-color;
+
+        article {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid @border-color;
+            border-radius: 15px;
+            color: @text-color;
+
+            a {
+                color: @hyperlink-color;
+            }
+
+            header {
+                background: none;
+                padding: 5px;
+
+                h1 {
+                    font-size: 1.4em;
+                    padding: 0;
+                }
+            }
+
+            footer {
+                padding: 5px;
+
+                p {
+                    font-size: 16px;
+                    text-align: right;
+                    font-weight: normal;
+
+                    time {
+                        font-family: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace;
+                    }
+
+                    a {
+                        text-decoration: none;
+                    }
+
+                        a:hover {
+                            text-decoration: underline;
+                        }
+                }
+            }
+        }
+    }
+
+    aside {
+        float: left;
+        width: 20%;
+        margin: 20px;
+
+        > ul {
+            list-style-type: none;
+
+            > li {
+                margin: 15px 0;
+                padding: 15px;
+                border: 1px solid @border-color;
+                border-radius: 5px;
+
+                h2 {
+                    font-size: 1.1em;
+                    font-weight: bold;
+                }
+
+                p {
+                    margin: 10px 5px 10px 5px;
+                    font-size: 14px;
+
+                    a {
+                        color: @hyperlink-color;
+                        text-decoration: none;
+                    }
+
+                    strong {
+                        color: @highlighted-text-color;
+                        font-weight: bold;
+                        font-style: normal;
+                    }
+
+                    em {
+                        color: @highlighted-text-color;
+                        font-weight: normal;
+                        font-style: italic;
+                    }
+                }
+
+                ul {
+                    list-style-type: none;
+                    margin: 10px 0 10px 0;
+
+                    li {
+                        margin: 5px 10px 0 0;
+                        background: url(images/li-dot.png) no-repeat;
+                        background-position: 0 50%;
+                        padding-left: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        clear: both;
+        padding: 15px 0 25px 0;
+
+        p {
+            font-size: 1.2em;
+            font-weight: bold;
+            padding-left: 859px;
+        }
+    }
+}

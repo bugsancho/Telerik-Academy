@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Point within circle</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+        <label for="x-coord">Enter x coordinate</label>
+        <input id="x-coord" type="number" />
+        <br />
+        <label for="y-coord">Enter y coordinate</label>
+        <input id="y-coord" type="number" />
+        <input type="button" value="Evaluate" onclick="CheckPoint()" />
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        function CheckPoint() {
+            var xCoord = jsConsole.readFloat('#x-coord');
+            var yCoord = jsConsole.readFloat('#y-coord');
+
+            var distance = xCoord * xCoord + yCoord * yCoord;
+
+            if (distance < 25) {
+                jsConsole.writeLine('The point is within the circle((0,0),5) !');
+            }
+            else {
+                jsConsole.writeLine('The point is not within the circle((0,0),5) !');
+            }
+        }
+    </script>
+</body>
+</html>

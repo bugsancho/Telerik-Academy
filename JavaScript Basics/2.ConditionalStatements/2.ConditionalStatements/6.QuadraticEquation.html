@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Quadratic equation</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+
+        <label for="a-coefficient">Enter coefficient a:</label>
+        <input id="a-coefficient" type="number" />
+        <br />
+        <label for="b-coefficient">Enter coefficient b:</label>
+        <input id="b-coefficient" type="number" />
+        <br />
+        <label for="c-coefficient">Enter coefficient c:</label>
+        <input id="c-coefficient" type="number" />
+        <input type="button" value="Evaluate" onclick="CalculateQuadraticEquation()" />
+
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        function CalculateQuadraticEquation() {
+            var aCoeff = jsConsole.readFloat('#a-coefficient'),
+                bCoeff = jsConsole.readFloat('#b-coefficient'),
+                cCoeff = jsConsole.readFloat('#c-coefficient');
+            if (!aCoeff) {
+                jsConsole.writeLine('Invalid input! Coefficient a cannot be zero!');
+                return;
+            }
+            var discriminant = 2 * bCoeff - 4 * aCoeff * cCoeff,
+                xOne,
+                xTwo;
+
+            if (discriminant < 0) {
+                jsConsole.writeLine('The equation has no real roots!');
+            }
+            else if (discriminant === 0) {
+                xOne = xTwo = -bCoeff / (2 * aCoeff);
+                jsConsole.writeLine('The only, double root of the equation is: x = ' + xOne);
+            }
+            else {
+                xOne = (-bCoeff + Math.sqrt(discriminant)) / 2 * aCoeff;
+                xTwo = (-bCoeff - Math.sqrt(discriminant)) / 2 * aCoeff;
+                jsConsole.writeLine('The roots of the equation are: x1 = ' + xOne + ' x2 = ' + xTwo);
+            }
+
+
+        }
+    </script>
+</body>
+</html>

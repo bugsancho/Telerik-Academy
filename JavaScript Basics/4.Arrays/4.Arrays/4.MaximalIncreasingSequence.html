@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="js-console">
+        <button onclick="PrintNumbers()">Print Numbers</button>
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        function PrintNumbers() {
+
+            var numbers = [5, 3, 3, 5, 8, 9, 5, 5, 5, 2, 2, 2, 5, 7, 8, 9];
+            var longestSequenceLength = 1,
+                currentSequenceLength = 1,
+                currentSequenceStartIndex = 1,
+                longestSequenceStartIndex = 1,
+                i;
+
+            for (i = 1; i < numbers.length; i++) {
+
+                if (numbers[i] > numbers[i - 1]) {
+                    currentSequenceLength++;
+
+
+                    if (currentSequenceLength > longestSequenceLength) {
+                        longestSequenceStartIndex = currentSequenceStartIndex;
+                        longestSequenceLength = currentSequenceLength;
+                    }
+
+                }
+                else {
+                    currentSequenceLength = 1;
+                    currentSequenceStartIndex = i;
+                }
+            }
+
+            var outputMessage = 'Longest increasing sequence is: ';
+
+            for (i = longestSequenceStartIndex; i < longestSequenceLength + longestSequenceStartIndex; i++) {
+                outputMessage += numbers[i] + ' ';
+            }
+
+            jsConsole.writeLine(outputMessage);
+
+        }
+    </script>
+</body>
+</html>

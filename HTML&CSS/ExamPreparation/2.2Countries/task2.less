@@ -1,0 +1,77 @@
+﻿div, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+    div#wrapper {
+        width: 960px;
+        font-size: 16px;
+        font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+        position: relative;
+
+        div {
+
+            ul {
+                background: #8169ff;
+                background: -moz-linear-gradient(top, #8169ff 0%, #ffffff 100%);
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8169ff), color-stop(100%,#ffffff));
+                background: -webkit-linear-gradient(top, #8169ff 0%,#ffffff 100%);
+                background: -o-linear-gradient(top, #8169ff 0%,#ffffff 100%);
+                background: -ms-linear-gradient(top, #8169ff 0%,#ffffff 100%);
+                background: linear-gradient(to bottom, #8169ff 0%,#ffffff 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8169ff', endColorstr='#ffffff',GradientType=0 );
+                list-style-type: none;
+                margin-left: 15px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                margin-right: 55px;
+                border-radius: 5px;
+                height: 200px;
+                width: 150px;
+                overflow-y: scroll;
+                float:left;
+                position:relative;
+
+
+                li {
+                    padding: 5px 15px;
+                    border-bottom: 1px solid black;
+
+                    &:first-letter{
+                        text-decoration:underline;
+                    }
+
+                    &:last-of-type {
+                        border: 0;
+                    }
+
+                    &.selected {
+                        background-color: #6c4dfd;
+                    }
+                }
+            }
+
+            .btn-unselect{
+
+                position:absolute;
+                top:110px;
+                left:170px;
+            }
+            .btn-select{
+
+                position:absolute;
+                top:110px;
+                left:200px;
+            }
+            a{
+                vertical-align:central;
+
+               
+                img{
+                    display:inline-block;
+                    float:left;
+                }
+            }
+            
+        }
+    }

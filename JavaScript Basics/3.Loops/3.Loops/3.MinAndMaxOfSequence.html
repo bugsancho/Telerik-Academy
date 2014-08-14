@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h2>Enter a sequence of integers, separated by whitespace to see the min and max of the sequence</h2>
+    <div id="js-console">
+        <label for="input-sequence">Enter a sequence of integers, separated by whitespace or comma</label>
+        <textarea id="input-sequence" onchange="PrintNumbers()" style="width:400px; height:100px;"> </textarea>
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        function PrintNumbers() {
+
+            var inputSequence = document.getElementById('input-sequence').value,
+                numbers,
+                min,
+                max,
+                currentNumber,
+                i;
+
+            inputSequence = inputSequence.trim();
+            numbers = inputSequence.split(/[\s,]/);
+            max = parseInt(numbers[0])
+            min = parseInt(numbers[0])
+
+            for (i = 1; i < numbers.length; i++) {
+                currentNumber = parseInt(numbers[i]);
+                if (currentNumber < min) {
+                    min = currentNumber;
+                }
+
+                if (currentNumber > max) {
+                    max = currentNumber;
+                }
+            }
+
+            jsConsole.writeLine('Max: ' + max + ' Min: ' + min);
+        }
+    </script>
+
+</body>
+
+</html>

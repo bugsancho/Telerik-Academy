@@ -1,0 +1,8 @@
+﻿{
+  "ignore": [],
+  "options": {
+    "predef": {}
+  },
+  "runOnSave": true,
+  "runOnBuild": true
+}

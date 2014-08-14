@@ -1,0 +1,28 @@
+﻿ul {
+    list-style-type: none;
+    display: none;
+}
+
+    ul li a {
+        color: lightblue;
+    }
+
+body > ul {
+    display: inline;
+}
+
+    body > ul > li > a {
+        color: black;
+    }
+
+a {
+    text-decoration: none;
+}
+
+li:hover > a {
+    text-decoration: underline;
+}
+
+li:hover > ul {
+    display: block;
+}

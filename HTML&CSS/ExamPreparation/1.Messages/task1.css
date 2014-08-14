@@ -1,0 +1,86 @@
+﻿div,
+ul,
+li,
+span,
+a {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 16px;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'DejaVu Sans Condensed', sans-serif;
+}
+body div#wrapper {
+  width: 960px;
+  color: #0094ff;
+}
+body div#wrapper ul {
+  list-style-type: none;
+}
+body div#wrapper .msg-bar {
+  width: 465px;
+  margin-top: 205px;
+  margin-left: 42px;
+  position: relative;
+}
+body div#wrapper .msg-bar > li {
+  display: inline-block;
+}
+body div#wrapper .msg-bar > li a.msg-bar-btn {
+  text-decoration: none;
+  border: 1px solid black;
+  background: -webkit-linear-gradient(top, #aaffef 0%, #13ffd2 100%);
+  padding: 5px 15px;
+  display: inline-block;
+}
+body div#wrapper .msg-bar > li a.msg-bar-btn:hover {
+  border-top: 0;
+  background: #00ddb3;
+}
+body div#wrapper .msg-bar > li a.msg-bar-btn:hover + .msg-bar-content {
+  display: block;
+}
+body div#wrapper .msg-bar > li a.msg-bar-btn:visited {
+  color: #0094ff;
+}
+body div#wrapper .msg-bar > li .msg-bar-content {
+  display: none;
+  background-color: #aaffef;
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  right: 0;
+  border: 1px solid black;
+  border-radius: 15px;
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+body div#wrapper .msg-bar > li .msg-bar-content ul {
+  list-style-type: none;
+}
+body div#wrapper .msg-bar > li .msg-bar-content ul li {
+  display: block;
+  margin-top: 5px;
+}
+body div#wrapper .msg-bar > li .msg-bar-content ul li span {
+  display: block;
+  text-align: right;
+  border-bottom: 1px solid black;
+  margin-left: 100px;
+  padding: 5px 15px;
+}
+body div#wrapper .msg-bar > li .msg-bar-content ul li span.user {
+  border: 1px solid black;
+  border-radius: 100px;
+  float: left;
+  padding-left: 25px;
+  margin: 0;
+  background-position-x: 5px;
+  background-position-y: 7px;
+}
+body div#wrapper .msg-bar > li .msg-bar-content ul li.me-item .user {
+  background-image: url(imgs/me.png);
+  background-repeat: no-repeat;
+}
+/*# sourceMappingURL=task1.css.map */

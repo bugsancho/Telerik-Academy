@@ -1,0 +1,10 @@
+{
+  "name": "_2.LabyrinthEscape",
+  "version": "0.0.0",
+  "description": "2.LabyrinthEscape",
+  "main": "app.js",
+  "author": {
+    "name": "alexander",
+    "email": ""
+  }
+}

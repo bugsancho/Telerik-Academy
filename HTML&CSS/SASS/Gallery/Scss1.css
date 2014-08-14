@@ -1,0 +1,62 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+
+ul li {
+    list-style-type: none;
+    display: inline;
+}
+
+.thumbs {
+    height: 150px;
+    border: 2px solid white;
+    opacity: 0.5;
+    margin-left: 10px;
+}
+
+    .thumbs:hover {
+        opacity: 1;
+        box-shadow: white 0px 0px 25px, inset white 0px -10px 10px;
+    }
+
+#firstbig, #secondbig, #thirdbig, #fourthbig, #sixthbig, #fifthbig {
+    display: none;
+}
+
+input {
+    display: none;
+}
+
+    input:checked + label #firstbig {
+        display: block;
+    }
+
+    input:checked + label #secondbig {
+        display: block;
+    }
+
+    input:checked + label #thirdbig {
+        display: block;
+    }
+
+    input:checked + label #fourthbig {
+        display: block;
+    }
+
+    input:checked + label #fifthbig {
+        display: block;
+    }
+
+    input:checked + label #sixthbig {
+        display: block;
+    }
+
+    input:checked + label img {
+        border: 1px solid white;
+        margin-left: 50px;
+        max-height: 500px;
+        margin-bottom: 50px;
+        box-shadow: white 0px 0px 10px, inset white 0px -10px 10px;
+    }

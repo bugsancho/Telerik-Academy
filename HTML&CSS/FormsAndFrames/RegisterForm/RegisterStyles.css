@@ -1,0 +1,40 @@
+﻿.input-data-column {
+    width: 80%;
+}
+
+label {
+    font-weight: bold;
+}
+table {
+    width: 500px;
+    border-spacing:0;
+}
+
+.small-sized {
+    width: 15%;
+}
+
+.medium-sized {
+    width: 50%;
+}
+
+.tiny-sized {
+    width: 10%;
+}
+
+input {
+    width: 80%;
+}
+
+tbody td:first-child {
+    text-align: right;
+}
+
+tfoot {
+    text-align: center;
+    background-color: aqua;
+}
+
+.small-label {
+    font-weight: normal;
+}

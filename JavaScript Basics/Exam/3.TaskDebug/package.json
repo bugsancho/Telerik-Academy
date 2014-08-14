@@ -1,0 +1,10 @@
+{
+  "name": "_3.TaskDebug",
+  "version": "0.0.0",
+  "description": "3.TaskDebug",
+  "main": "app.js",
+  "author": {
+    "name": "alexander",
+    "email": ""
+  }
+}

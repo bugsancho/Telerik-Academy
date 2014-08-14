@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h2>Enter a number from the array listed below to get its index</h2>
+    <div id="js-console">
+        <label for="searched-number">Enter an index: </label>
+        <input id="searched-number" type="number" onchange="PrintNumbers()" />
+        <button onclick="PrintNumbers()">Print Numbers</button>
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+      
+
+        function PrintNumbers() {
+
+            var numbers = [-5, -3, 0, 1, 2, 3, 5, 8, 18, 24];
+            var left = 0,
+                right = numbers.length,
+                middle,
+                searchedNumber = jsConsole.readInteger('#searched-number');
+
+
+            jsConsole.writeLine(numbers)
+
+            while (true) {
+                middle = Math.floor((left + right) / 2);
+
+                if (searchedNumber < numbers[middle]) {
+                    right = middle;
+
+                }
+                else if (searchedNumber > numbers[middle]) {
+                    left = middle;
+                }
+                else {
+                    break;
+                }
+            }
+
+            jsConsole.writeLine(middle);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h2>Enter two strings and click the button to compare them lexicographically</h2>
+    <div id="js-console">
+        <label for="first-input">Enter something: </label>
+        <input id="first-input" type="text" />
+        <br />
+        <label for="second-input">Enter something else: </label>
+        <input id="second-input" type="text" />
+        <button onclick="CompareValues()">Compare Values</button>
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        function CompareValues() {
+            var firstString = jsConsole.read('#first-input'),
+                secondString = jsConsole.read('#second-input'),
+                comparisonResult = compareLexicographically(firstString, secondString);
+
+            if (comparisonResult < 0) {
+                jsConsole.writeLine('The first input is lexicographically before the second!');
+            }
+            else if (comparisonResult > 0) {
+                jsConsole.writeLine('The second input is lexicographically before the first!');
+            }
+            else {
+                jsConsole.writeLine('The two sequences are equal!');
+            }
+        }
+
+        function compareLexicographically(firstString, secondString) {
+
+            var shorterSequence = firstString.length <= secondString.length ? firstString.length : secondString.length;
+            firstString = firstString.toLowerCase();
+            secondString = secondString.toLowerCase();
+
+            for (var i = 0; i < shorterSequence; i++) {
+
+                if (firstString[i] !== secondString[i]) {
+
+                    if (firstString[i] < secondString[i]) {
+                        return -1;
+
+                    }
+                    else {
+                        return 1;
+                    }
+                }
+            }
+            if (firstString.length === secondString.length) {
+                return 0;
+            }
+            else if (firstString.length > secondString.length) {
+                return 1;
+            }
+            else {
+                return -1;
+            }
+        }
+    </script>
+</body>
+
+</html>

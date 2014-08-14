@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+        <label for="input-text">Enter some text: </label>
+        <input id="input-text" type="text" onchange="testFunc()" />
+        <label for="searched-word">Enter a word to search for: </label>
+        <input id="searched-word" type="text" onchange="testFunc()" />
+
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        function testFunc() {
+            var inputText = jsConsole.read("#input-text");
+            var searchedWord = jsConsole.read("#searched-word");
+            var numberOfOccurances = findOcurrancesOfWordInText(inputText, searchedWord, false);
+            jsConsole.writeLine(numberOfOccurances);
+           
+        }
+
+
+        function findOcurrancesOfWordInText(inputText, searchedWord, isSearchCaseSensitive) {
+
+            var currentIndex = -1,
+                lastIndex = -1,
+                numberOfOccurances = 0;
+            if (arguments.length == 3 && !isSearchCaseSensitive) {
+
+                inputText = inputText.toLowerCase();
+                searchedWord = searchedWord.toLowerCase();
+            }
+
+
+            for (var i = 0; i < inputText.length; i++) {
+
+                currentIndex = inputText.indexOf(searchedWord, i);
+                if (currentIndex != lastIndex && currentIndex != -1) {
+                    lastIndex = currentIndex;
+                    i = currentIndex;
+                    numberOfOccurances++;
+                }
+                else {
+                    break;
+                }
+
+            }
+
+
+
+
+            return numberOfOccurances;
+        }
+    </script>
+</body>
+
+
+
+</html>

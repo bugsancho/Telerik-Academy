@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Calculator</title>
+    <link href="CalculatorStyles.css" rel="stylesheet" />
+</head>
+<body>
+    <header></header>
+    <div class="wrapper">
+        <table border="1">
+            <tr>
+                <td colspan="10"><textarea>8854455</textarea></td>
+            </tr>
+            <tr>
+                <td colspan="10">
+                    <div class="binary">
+                        <ul>
+                            <li>0000</li>
+                            <li>0000</li>
+                            <li>0000</li>
+                            <li>0000</li>
+                            <li>0000</li>
+                            <li>0000</li>
+                            <li>0000</li>
+                            <li>0000</li>
+                        </ul>
+                        <ul class="binary-number">
+                            <li>63</li>
+                            <li>47</li>
+                            <li>32</li>
+                        </ul>
+
+                        <ul>
+                            <li>0000</li>
+                            <li>1000</li>
+                            <li>1000</li>
+                            <li>0101</li>
+                            <li>0100</li>
+                            <li>0100</li>
+                            <li>0101</li>
+                            <li>0101</li>
+                        </ul>
+                        <ul class="binary-number ">
+                            <li>31</li>
+                            <li>15</li>
+                            <li>0</li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" rowspan="3">
+                    <div>
+                        <ul>
+                            <li>
+                                <input type="radio" name="numeralSystem" id="hex" />
+                                <label for="hex">Hex</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="numeralSystem" id="dec" checked="checked" />
+                                <label for="dec">Dec</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="numeralSystem" id="oct" />
+                                <label for="oct">Oct</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="numeralSystem" id="bin" />
+                                <label for="bin">Bin</label>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+                <td><button disabled="disabled" class="inactive"></button></td>
+                <td><button class="active">Mod</button></td>
+                <td><button disabled="disabled" class="inactive">A</button></td>
+                <td><button class="semi-active">MC</button></td>
+                <td><button class="semi-active">MR</button></td>
+                <td><button class="semi-active">MS</button></td>
+                <td><button class="semi-active">M+</button></td>
+                <td><button class="semi-active">M-</button></td>
+            </tr>
+            <tr>
+                <td><button class="active">(</button></td>
+                <td><button class="active">)</button></td>
+                <td><button disabled="disabled" class="inactive">B</button></td>
+                <td><button class="active">&larr;</button></td>
+                <td><button class="active">CE</button></td>
+                <td><button class="active">C</button></td>
+                <td><button class="active">&plusmn;</button></td>
+                <td><button disabled="disabled" class="inactive">&radic;</button></td>
+            </tr>
+            <tr>
+                <td><button class="active">Rol</button></td>
+                <td><button class="active">Ror</button></td>
+                <td><button disabled="disabled" class="inactive">C</button></td>
+                <td><button class="active number">7</button></td>
+                <td><button class="active number">8</button></td>
+                <td><button class="active number">9</button></td>
+                <td><button class="active">/</button></td>
+                <td><button disabled="disabled" class="inactive">%</button></td>
+            </tr>
+            <tr>
+                <td colspan="2" rowspan="3">
+                    <div>
+                        <ul>
+                            <li>
+                                <input type="radio" name="wordLength" id="qword" checked="checked" />
+                                <label for="qword">Qword</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="wordLength" id="dword" />
+                                <label for="dword">Dword</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="wordLength" id="word" />
+                                <label for="word">Word</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="wordLength" id="byte" />
+                                <label for="byte">Byte</label>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+                <td><button class="active">Or</button></td>
+                <td><button class="active">Xor</button></td>
+                <td><button disabled="disabled" class="inactive">D</button></td>
+                <td><button class="active number">4</button></td>
+                <td><button class="active number">5</button></td>
+                <td><button class="active number">6</button></td>
+                <td><button class="active">*</button></td>
+                <td><button disabled="disabled" class="inactive"><sup>1</sup>&frasl;<sub>x</sub></button></td>
+            </tr>
+            <tr>
+                <td><button class="active">Lsh</button></td>
+                <td><button class="active">Rsh</button></td>
+                <td><button disabled="disabled" class="inactive">E</button></td>
+                <td><button class="active number">1</button></td>
+                <td><button class="active number">2</button></td>
+                <td><button class="active number">3</button></td>
+                <td><button class="active">-</button></td>
+                <td rowspan="2"><button class="active doubleRow">=</button></td>
+            </tr>
+            <tr>
+                <td><button class="active">Not</button></td>
+                <td><button class="active">And</button></td>
+                <td><button disabled="disabled" class="inactive">F</button></td>
+                <td colspan="2"><button class="active number doubleCol">0</button></td>
+                <td><button disabled="disabled" class="inactive">.</button></td>
+                <td><button class="active">+</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Odd or even number</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+        <div>
+            <label for="input-number">Enter a number: </label>
+            <input id="input-number" type="number" onchange="NumberChanged()" />
+
+        </div>
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function NumberChanged() {
+
+            var number = jsConsole.readInteger('#input-number');
+            if (number % 2 === 0) {
+                jsConsole.writeLine('The number ' + number + ' is even!');
+            }
+            else {
+                jsConsole.writeLine('The number ' + number + ' is odd!');
+            }
+        }
+    </script>
+</body>
+
+</html>

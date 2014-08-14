@@ -1,0 +1,61 @@
+﻿div, h1, img, p {
+    margin: 0;
+    padding: 0;
+}
+
+    div#wrapper {
+        width: 960px;
+        font-size: 16px;
+        font-family: Constantina, Georgia, 'Nimbus Roman No9 L', serif;
+
+        div {
+            background: -webkit-linear-gradient(top, #de28ff 0%,#de28ff 14%,#f9dbff 75%,#f9dbff 100%);
+            width: 933px;
+            margin: 25px 17px;
+            border: 1px solid black;
+            border-radius: 15px;
+            height: 208px;
+            position: relative;
+
+            h1 {
+                font-size: 1.8em;
+                padding-left: 35px;
+                padding-top: 15px;
+            }
+
+            img {
+
+                &.left-arrow {
+                    position: absolute;
+                    left:0;
+                    top:83px;
+                   
+                }
+
+                &.right-arrow{
+
+                    position:absolute;
+                    right:0;
+                    top:83px;
+                }
+            }
+
+            p.postedby {
+                margin-left:50px;
+                border-top:1px solid black;
+                border-bottom:1px solid black;
+                margin-right:487px;
+                margin-top:5px;
+                padding:5px 15px;
+            }
+
+            p.info{
+
+                margin:20px 35px;
+                margin-top:21px;
+                text-align:justify;
+
+
+            }
+        }
+    }

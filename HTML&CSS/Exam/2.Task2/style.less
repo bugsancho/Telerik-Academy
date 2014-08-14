@@ -1,0 +1,84 @@
+﻿body, div, ul, li, h3, p {
+    padding: 0;
+    margin: 0;
+}
+
+    div#wrapper {
+        width: 960px;
+        font-size: 16px;
+        font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+
+        ul.menu {
+            list-style-type: none;
+
+            & > li {
+                background: -webkit-linear-gradient(top, #737373 0%,#ffffff 100%);
+                border: 20px solid #808080;
+                float: left;
+                width: 180px;
+                margin-left: 5px;
+                margin-top: 5px;
+                text-align: center;
+
+                &:hover {
+                    border: 20px solid rgb(69,69,69);
+                    background: #808080;
+
+                    h3 {
+                        text-decoration: underline;
+                    }
+
+                    div.image-container {
+
+
+                        img {
+                            width: 140px;
+                            height: 110px;
+                            border-radius: 20px;
+                        }
+                    }
+
+                    p.subtitle {
+                        display: none;
+                    }
+
+                    p.click-here {
+                        color: white;
+                        display: block;
+                        margin-bottom: 14px;
+                        text-transform: uppercase;
+                    }
+                }
+
+
+
+                &:first-child {
+                    margin-left: 4px;
+                }
+
+                h3 {
+                    color: white;
+                    margin: 5px 0;
+                }
+
+                div.image-container {
+
+
+                    img {
+                        width: 120px;
+                        height: 100px;
+                        border-radius: 20px;
+                    }
+                }
+
+                p.subtitle {
+                    margin-top: 10px;
+                    margin-bottom: 14px;
+                }
+
+                p.click-here {
+                    display: none;
+                }
+            }
+        }
+    }

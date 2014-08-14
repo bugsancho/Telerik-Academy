@@ -1,0 +1,57 @@
+﻿div,
+ul,
+li,
+a,
+table,
+th,
+tr,
+td {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 16px;
+  font-family: Cambria, 'Times New Roman', 'Nimbus Roman No9 L', 'Freeserif', Times, serif;
+}
+body div#wrapper {
+  width: 960px;
+  height: 250px;
+  border-radius: 5px;
+}
+body div#wrapper .tab-strip {
+  list-style-type: none;
+  display: inline-block;
+  border: 1px solid black;
+}
+body div#wrapper .tab-strip > li {
+  display: inline-block;
+}
+body div#wrapper .tab-strip > li a {
+  color: black;
+  background: #ededed;
+  background: -moz-linear-gradient(top, #ededed 0%, #ababab 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ededed), color-stop(100%, #ababab));
+  background: -webkit-linear-gradient(top, #ededed 0%, #ababab 100%);
+  background: -o-linear-gradient(top, #ededed 0%, #ababab 100%);
+  background: -ms-linear-gradient(top, #ededed 0%, #ababab 100%);
+  background: linear-gradient(to bottom, #ededed 0%, #ababab 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ababab', GradientType=0);
+  text-decoration: none;
+  font-size: 1.3em;
+  border-radius: 5px;
+}
+body div#wrapper .tab-strip .tab-content {
+  display: none;
+}
+body div#wrapper .tab-strip li.current > a {
+  background: white;
+  font-weight: bold;
+  border-right: 1px solid black;
+  border-radius: 0;
+  position: relative;
+}
+body div#wrapper .tab-strip li.current .tab-content {
+  display: block;
+  position: absolute;
+}
+/*# sourceMappingURL=task2.css.map */

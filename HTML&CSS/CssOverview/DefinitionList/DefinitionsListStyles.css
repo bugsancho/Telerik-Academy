@@ -1,0 +1,38 @@
+﻿body {
+    background-color: gray;
+    font-family:sans-serif;
+}
+
+section h1 {
+    font-weight: normal;
+    color:lightgray;
+}
+
+dt {
+    font-style: italic;
+    color: whitesmoke;
+    float: left;
+}
+dd{
+    padding-left:6em;
+    padding-bottom:10px;
+}
+.red{
+    color:red;
+}
+.orange{
+    color:orange;
+}
+.gray{
+    color:lightgray;
+}
+.yellow{
+    color:lightyellow;
+}
+.state{
+    font-weight:bold;
+}
+img{
+    width:10px;
+    height:10px;
+}

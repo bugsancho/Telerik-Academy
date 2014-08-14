@@ -1,0 +1,18 @@
+@mixin linear-gradient ($color1, $color2, $color3, $color4, $color5, $color6, $color7, $pos1, $pos2, $pos3, $pos4, $pos5, $pos6 ) {
+	background: $color1;
+	background: linear-gradient(to bottom,  $color1 $pos1,$color2 $pos2,$color3 $pos3,$color4 $pos4,$color5 $pos5,$color6 $pos6,$color7 $pos6,$color1 $pos6);
+    background:-moz-linear-gradient(top,  $color1 $pos1, $color2 $pos2, $color3 $pos3, $color4 $pos4, $color5 $pos5, $color6 $pos6, $color7 $pos6, $color1 $pos6);
+    background:-webkit-linear-gradient(top,  $color1 $pos1,$color2 $pos2,$color3 $pos3,$color4 $pos4,$color5 $pos5,$color6 $pos6,$color7 $pos6,$color1 $pos6); 
+    background:-o-linear-gradient(top,  $color1 $pos1,$color2 $pos2,$color3 $pos3,$color4 $pos4,$color5 $pos5,$color6 $pos6,$color7 $pos6,$color1 $pos6);
+    background:-ms-linear-gradient(top,  $color1 $pos1,$color2 $pos2,$color3 $pos3,$color4 $pos4,$color5 $pos5,$color6 $pos6,$color7 $pos6,$color1 $pos6);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad5def', endColorstr='#ad5def',GradientType=0 );
+}
+@mixin radius ($radius, $color) {
+	border: 1px solid $color;
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-o-border-radius: $radius;
+	-ms-border-radius: $radius;
+}
+

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Point within circle and rectangle</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+        <label for="x-coord">Enter x coordinate</label>
+        <input id="x-coord" type="number" />
+        <br />
+        <label for="y-coord">Enter y coordinate</label>
+        <input id="y-coord" type="number" />
+        <input type="button" value="Evaluate" onclick="CheckPoint()" />
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        function CheckPoint() {
+            var xCoord = jsConsole.readFloat('#x-coord');
+            var yCoord = jsConsole.readFloat('#y-coord');
+
+            var distance = (xCoord - 1) * (xCoord - 1) + (yCoord - 1) * (yCoord - 1);
+            var circleRadius = 9;
+
+            if ((xCoord < -1 || xCoord > 5 || yCoord > 1 || yCoord < -1) && distance <= circleRadius) {
+                jsConsole.writeLine('The point is within the circle and outside of the rectangle!');
+
+            }
+            else if (distance > circleRadius) {
+                jsConsole.writeLine('The point is outside the circle!');
+            }
+            else {
+                jsConsole.writeLine('The point is inside the rectangle!');
+            }
+
+
+
+        }
+    </script>
+
+</body>
+</html>

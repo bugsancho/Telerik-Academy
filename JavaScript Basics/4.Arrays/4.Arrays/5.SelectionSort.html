@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="js-console">
+        <button onclick="PrintNumbers()">Print Numbers</button>
+    </div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        function PrintNumbers() {
+
+            var numbers = [3, 8, -1, 2, 5, 7, 8, 9, 0, -18];
+            var sortedArray = new Array(numbers.length);
+            var minElement, minElementIndex, i, j;
+
+            for (i = 0; i < numbers.length; i++) {
+
+
+                minElement = numbers[i];
+                minElementIndex = i;
+
+                for (j = i + 1; j < numbers.length; j++) {
+
+                    if (minElement > numbers[j]) {
+                        minElementIndex = j;
+                        minElement = numbers[j];
+                    }
+
+                }
+
+                sortedArray[i] = minElement;
+                numbers[minElementIndex] = numbers[i];
+            }
+
+            var outputMessage = 'Sorted array: ';
+
+            for (i = 0; i < sortedArray.length; i++) {
+
+                outputMessage += sortedArray[i] + ' ';
+            }
+            jsConsole.writeLine(outputMessage)
+        }
+    </script>
+</body>
+</html>
