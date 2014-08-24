@@ -1,3 +1,4 @@
+USE Citizens
 SELECT
 	 p.FirstName + ' ' + p.LastName AS Name, a.AddressText AS Address, t.Name AS Town, c.Name AS Country, cont.Name AS Continent
 		FROM People p
