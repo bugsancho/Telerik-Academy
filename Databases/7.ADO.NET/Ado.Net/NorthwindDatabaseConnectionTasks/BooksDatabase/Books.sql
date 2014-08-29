@@ -1,0 +1,4 @@
+DROP TABLE IF EXISTS "Books";
+CREATE TABLE "Books" ("BookID" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL  UNIQUE , "Title" VARCHAR(50) NOT NULL , "Author" VARCHAR(50) NOT NULL , "PublishDate" DATETIME, "ISBN" VARCHAR(30));
+INSERT INTO "Books" VALUES(1,'The Hitchhiker''s Guide to the Galaxy','Douglas Adams','1979-10-12','0-330-25864-8');
+INSERT INTO "Books" VALUES(2,'Carrie','Stephen King','1974-05-04','978-0-385-08695-0');
