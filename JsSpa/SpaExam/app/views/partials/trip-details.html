@@ -1,0 +1,14 @@
+<h1 class="text-center">{{trip.driverName}} - {{trip.departureDate | date:'medium'}}</h1>
+
+<div class="container">
+
+    <div class="col-md-4">From: <strong>{{trip.from}}</strong></div>
+    <div class="col-md-4">To: <strong>{{trip.to}}</strong></div>
+    <div class="col-md-4">Number of free seats: <strong>{{trip.numberOfFreeSeats}}</strong></div>
+    <p  class="text-center">Passangers: {{trip.passengers}}</p>
+
+    <div>
+        <button class="btn btn-info pull-right" ng-show="trip.numberOfFreeSeats > 0" ng-click="join(trip.id)">Join
+        </button>
+    </div>
+</div>

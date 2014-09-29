@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>{{driver.name}}</h1>
+    <div class="col-md-3">Upcoming trips: <strong>{{driver.numberOfUpcomingTrips}}</strong></div>
+    <div class="col-md-3">Total Trips <strong>{{driver.numberOfTotalTrips}}</strong></div>
+    <div class="col-md-3">
+
+        <input  id="onlyMineTrips" type="checkbox" name="tripsBoolFilter" ng-model="onlyMine"/>
+        <label for="onlyMineTrips">Only mine trips</label>
+        <input id="onlyTheirsTrips" type="checkbox" name="tripsBoolFilter" ng-model="data"/>
+        <label for="onlyTheirsTrips">Only their trips</label>
+    </div>
+    <div class="col-md-3">
+        <select name="filter" id="filterType" ng-model="orderBy" >
+            <option value="None" selected="selected">None</option>
+            <option value="from">From</option>
+            <option value="to">To</option>
+            <option value="departureDate" ng-selected="toggleAscending()">Departure time</option>
+        </select>
+    </div>
+<div>
+
+</div>
+
+    <table class="table table-striped table-hover ">
+        <thead trip-info-header>
+
+
+        </thead>
+        <tbody>
+        <tr trip-info trip="trip" ng-repeat="trip in trips | orderBy: orderBy : false | filter: onlyMine ">
+
+        </tr>
+        </tbody>
+    </table>
+
+</div>

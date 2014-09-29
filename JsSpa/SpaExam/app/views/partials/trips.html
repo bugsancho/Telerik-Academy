@@ -1,0 +1,71 @@
+<div class="container">
+    <a href="#/trips/create" class="pull-right btn-info btn" ng-show="userInfo.isDriver">Create</a>
+
+</div>
+
+<div class="container">
+    <h1 class="text-center">Trips</h1>
+
+    <div ng-show="isAuthenticated" class="container">
+        <div class="col-md-3">Sort</div>
+        <div class="col-md-3">Order</div>
+        <div class="col-md-3">From</div>
+        <div class="col-md-3">To</div>
+        <div class="col-md-3">
+
+            <select name="filter" id="filterType" ng-model="filters.orderBy">
+                <option value="driver" selected>Driver</option>
+                <option value="from">From</option>
+                <option value="to">To</option>
+                <option value="date" ng-selected="toggleAscending()">Date</option>
+                <option value="seats" ng-selected="toggleAscending()">Number of Seats</option>
+            </select>
+        </div>
+
+        <div class="col-md-3">
+
+            <select name="order" id="filterType" ng-model="filters.orderType">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select name="from" id="filterType" ng-model="filters.from" >
+                <option ng-repeat="city in cities" value="{{city}}">{{city}}</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select name="to" id="filterType" ng-model="filters.to">
+                <option ng-repeat="city in cities" value="{{city}}">{{city}}</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="container" ng-show="isAuthenticated">
+        <div>
+
+            <input id="hasFinnished" type="checkbox" ng-model="filters.finished"/>
+            <label for="hasfinnished">Has trip finished</label>
+            <input id="onlyMine" type="checkbox" ng-model="filters.onlyMine"/>
+            <label for="onlyMine">OnlyMine</label>
+            <label class="btn-info btn btn-lg" for="filter" ng-click="getTrips(filters)">Filter</label>
+        </div>
+        <div class="pull-right">
+            <button ng-click="decreasePage()" class="btn btn-info" ng-disabled="filters.page <=1"><<</button>
+
+            <input ng-model="filters.page" type="number" min="1"/>
+            <button ng-click="increasePage()" class="btn btn-info">>></button>
+        </div>
+    </div>
+    <table ng-show="trips.length > 0" class="table table-striped table-hover text-center">
+        <thead trip-info-header in-details="isAuthenticated">
+
+        </thead>
+        <tbody>
+        <tr trip-info trip="trip" in-details="isAuthenticated" ng-repeat="trip in trips">
+
+        </tr>
+        </tbody>
+    </table>
+    <h1 class="text-center" ng-hide="trips.length >0">No results!</h1>
+</div>

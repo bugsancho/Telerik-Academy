@@ -1,0 +1,13 @@
+<td>
+    <a href="#/drivers/{{trip.driverId}}">{{trip.driverName}}</a>
+
+</td>
+<td>{{trip.from}}</td>
+<td>{{trip.to}}</td>
+<td>
+    <a href="#trips/{{trip.id}}">{{trip.departureDate | date:'medium'}}</a>
+</td>
+<td ng-show="isInDetails">
+    <img src="img/check.png" alt="Mine" ng-show="trip.isMine"/>
+    <img src="img/uncheck.jpg" alt="Mine" ng-hide="trip.isMine"/>
+</td>
